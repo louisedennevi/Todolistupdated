@@ -9,9 +9,18 @@ body {
 }
 
 a:link {
-    color: black;
+    color: gray;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
 }
 
+a:visited {
+    color: gray;
+}
+
+button {
+    text-transform: uppercase;
+    background: lightgray;
+    color: white;
+}
