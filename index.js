@@ -7,8 +7,8 @@ const path = require("path");
 const app = express();
 
 
-
 //middleware
+
 app.use(express.urlencoded({extended:true}))
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -23,10 +23,8 @@ app.use(sassMiddleware({
     dest: path.join(__dirname, "public")
 }))
 
-
-
-
 //router 
+
 app.use(commentRouter)
 
 

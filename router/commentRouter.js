@@ -29,21 +29,6 @@ router.route("/comment")
      res.redirect("/comment")
    } );
   })
-      
-  
-  // router.get("/comment", async (req, res) => {
-
-
-  // console.log(req.query)
-  // const sorted = req.query.sort;
-
-  // const comments = await Comment.find().sort({author:sorted});
-
-
-  //  res.render("comment", {comments});
-  // }
-  // )
-  
 
   
   router.get("/delete/:id", async(req, res)=>{
