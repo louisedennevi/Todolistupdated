@@ -18,7 +18,6 @@ router.route("/comment")
   .post( async (req, res)=>{
   const comment = new Comment({
           text: req.body.text,
-          author: req.body.author
       })
     await comment.save( (error, sucess )=> {
      if (error) {
