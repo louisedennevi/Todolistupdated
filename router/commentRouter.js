@@ -2,11 +2,6 @@ const express = require("express");
 const Comment = require("../model/comment")
 const router = express.Router();
 
-
-//comment(data) och ska visa den till comment router
-//create
-//skapa comment med post router och en ejs input fält (för torsdag)
-
 router.route("/comment")
   .get(async(req,res)=>{
     const sorted = req.query.sort;
@@ -49,7 +44,7 @@ router.route("/comment")
 //använd updateOne metoden för att kunna redigera kommentarerna
 
   await Comment.updateOne({_id:req.body._id}, 
-    {$set: {text:req.body.text, author:req.body.author}}, {runValidators:true}, (err)=>{
+    {$set: {text:req.body.text}}, {runValidators:true}, (err)=>{
       err? res.send(err.message): res.redirect("/comment")
     })
   console.log(req.body);
