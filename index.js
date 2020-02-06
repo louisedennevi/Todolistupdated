@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const commentRouter = require("./router/commentRouter");
+const todoRouter = require("./router/todoRouter");
 const sassMiddleware = require("node-sass-middleware");
 const config = require("./config/config")
 const path = require("path");
@@ -25,7 +25,7 @@ app.use(sassMiddleware({
 
 //router 
 
-app.use(commentRouter)
+app.use(todoRouter)
 
 
 //listen to port 

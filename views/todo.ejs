@@ -1,0 +1,26 @@
+<%- include("partial/header.ejs") %>
+
+<body>
+    <% todos.forEach( (todo)=> {%>
+        <div> <%= todo.text %></div>
+        <!-- <div><%= todo.author %></div>
+        <div><%= todo.date %></div> -->
+
+        <a href="/update/<%=todo._id%>">Update</a>
+        <a href="/delete/<%=todo._id%>">Delete</a>
+
+
+    <% }) %>
+
+   <div>
+        <form action="/todo" method="post">
+            <input type="text" name="text" id="">
+            <!-- <input type="text" name="author" id=""> -->
+            <button type="submit">Post todo</button>
+        </form>
+   </div>
+
+   <%- include("partial/footer.ejs") %>
+
+</body>
+</html>
