@@ -3,8 +3,8 @@
 <body>
     <% comments.forEach( (comment)=> {%>
         <div> <%= comment.text %></div>
-        <div><%= comment.author %></div>
-        <div><%= comment.date %></div>
+        <!-- <div><%= comment.author %></div>
+        <div><%= comment.date %></div> -->
 
         <a href="/update/<%=comment._id%>">Update</a>
         <a href="/delete/<%=comment._id%>">Delete</a>
@@ -15,7 +15,7 @@
    <div>
         <form action="/comment" method="post">
             <input type="text" name="text" id="">
-            <input type="text" name="author" id="">
+            <!-- <input type="text" name="author" id=""> -->
             <button type="submit">Post comment</button>
         </form>
    </div>
