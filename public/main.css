@@ -8,7 +8,7 @@ body {
   text-align: center;
   margin: 10px;
   font-size: 17px;
-  color: pink;
+  color: #222;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: lighter; }
 
@@ -19,7 +19,9 @@ button {
   border: none;
   outline: none;
   background: pink;
-  color: white; }
+  color: white;
+  margin: 15% auto;
+  margin-bottom: 40px; }
 
 input {
   width: 250px;
@@ -30,10 +32,14 @@ input {
   color: #222;
   letter-spacing: 1px;
   border-radius: 5px;
-  margin: 8% auto;
+  margin: 15% auto;
   padding: 10px;
-  opacity: 70%; }
+  opacity: 70%;
+  margin-bottom: 40px; }
 
 a, a:active, a:hover, a:visited {
   text-decoration: none;
   color: #222; }
+
+.text {
+  letter-spacing: 1px; }

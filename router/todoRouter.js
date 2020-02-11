@@ -31,10 +31,27 @@ router.route("/todo")
     res.redirect("/todo");
   })
   
-    router.route("/update/:id")
-  .get(async(req,res)=>{
-
-
+        router.route("/update/:id")
+      .get(async(req,res)=>{
+    
+    
+    //hämta specifik data från databasen
+      const response = await Todo.findById({_id:req.params.id})
+    //sen skicka till edit sidan
+      res.render("edit", {response})
+      })
+      
+      .post(async(req, res)=>{    
+    //använd updateOne metoden för att kunna redigera kommentarerna
+    
+    
+      await Todo.updateOne({_id:req.body._id}, 
+        {$set: {text:req.body.text}}, {runValidators:true}, (err)=>{
+          err? res.send(err.message): res.redirect("/todo")
+        })
+      console.log(req.body);
+    })
+    
 
   
   module.exports = router;

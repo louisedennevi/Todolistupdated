@@ -10,7 +10,7 @@
            </div>
 
     <% todos.forEach( (todo)=> {%>
-        <div> <%= todo.text %>
+        <div class="text"> <%= todo.text %>
         <a class="fas fa-pen" href="/update/<%=todo._id%>"></a>
         <a class="fas fa-times-circle" href="/delete/<%=todo._id%>"></a>
         </div>
