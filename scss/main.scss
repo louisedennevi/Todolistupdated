@@ -33,6 +33,9 @@ h1 {
     margin: 8% auto;
     margin-bottom: 40px;
     overflow: hidden;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 input {
@@ -69,13 +72,12 @@ input {
     border-radius: 5px;
     color: black;
     font-size: 15px;
-    cursor: pointer;
     position: relative;
   }
 
   .text a {
     margin-left: 2px;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 1px;
     margin-left: 20px;
     position: absolute;
@@ -84,17 +86,18 @@ input {
 
   #update {
     position: absolute;
-    top: 15px;
+    top: 18px;
     right: 40px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #delete {
       position: absolute;
-      top: 15px;
+      top: 18px;
       right: 16px;
-      font-size: 18px;
+      font-size: 15px;
   }
+
 
   a {
       color: black;

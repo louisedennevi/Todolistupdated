@@ -36,6 +36,7 @@
 
         <br>
         <br>
+       
         <% for (let page = 1; page < pageCount; page++) { %>
             <% if (currentPage == page) { %>
                 <a href="/todo/?page=<%= page %>" class="active"><%= page %></a>
@@ -43,6 +44,7 @@
                 <a href="/todo/?page=<%= page %>"><%= page %></a>
             <% } %>
         <% } %>
+    
 
         <!-- Footer -->
 
