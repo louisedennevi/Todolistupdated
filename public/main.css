@@ -82,3 +82,8 @@ a, a:active, a:hover, a:visited {
   top: 15px;
   right: 16px;
   font-size: 18px; }
+
+a {
+  color: black; }
+  a.active {
+    color: red; }

@@ -4,10 +4,19 @@ const router = express.Router();
 
 router.route("/todo")
   .get(async(req,res)=>{
+    
+    const currentPage = req.query.page || 1;
+    const items = 3;
+
     const sorted = req.query.sort;
 
-    const todos= await Todo.find().sort({text:sorted});
-    res.render("todo", {todos});
+    const allTodos = await Todo.find()
+    const threeTodos = await Todo.find().skip((currentPage - 1) * items).limit(items).sort({text:sorted});
+    const pageCount = Math.ceil(allTodos.length / items)
+
+    res.render("todo", {threeTodos, pageCount, currentPage});
+
+    
   })
 
   .post( async (req, res)=>{

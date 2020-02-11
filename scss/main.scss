@@ -95,3 +95,10 @@ input {
       right: 16px;
       font-size: 18px;
   }
+
+  a {
+      color: black;
+        &.active{
+            color: red;
+        }
+  }
