@@ -33,14 +33,12 @@
         <!-- Todolist -->
 
         <% threeTodos.forEach( (todo)=> { %>
-            <div class="slide">
                 <div class="maindiv">
                     <div class="text"> <%= todo.text %>
                         <a class="fas fa-pen" id="update" href="/update/<%=todo._id%>"></a>
                         <a class="fas fa-times-circle" id="delete" href="/delete/<%=todo._id%>"></a>
                     </div>
                 </div>
-            </div>
         <% }) %>
 
 
