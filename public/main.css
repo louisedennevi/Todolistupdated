@@ -15,7 +15,8 @@ body {
 h1 {
   margin-top: 80px;
   text-transform: uppercase;
-  color: pink; }
+  color: pink;
+  font-size: 50px; }
 
 .buttonfx {
   width: 50px;
@@ -31,6 +32,8 @@ h1 {
   font-size: 15px;
   text-transform: uppercase;
   cursor: pointer; }
+  .buttonfx.update {
+    width: 80px; }
 
 input {
   width: 400px;
@@ -89,3 +92,17 @@ a {
   color: black; }
   a.active {
     color: red; }
+
+#sort {
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: pink;
+  overflow: hidden;
+  font-size: 10px;
+  opacity: 70%;
+  text-transform: uppercase;
+  margin-left: 72px;
+  margin-right: 72px; }
