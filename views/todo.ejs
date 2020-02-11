@@ -3,17 +3,17 @@
 <body>
 
         <div>
-                <form action="/todo" method="post" id="form">
-                    <input type="text" name="text" id="input" placeholder="Write your todo here...">
-                    <button type="submit" class="button btn btn-light">+</button>
+                <form action="/todo" method="post">
+                    <input type="text" name="text" placeholder="Write your todo here!">
+                    <button type="submit">Add</button>
                 </form>
            </div>
 
     <% todos.forEach( (todo)=> {%>
-        <div> <%= todo.text %></div>
-        <a href="/update/<%=todo._id%>">Update</a>
-        <a href="/delete/<%=todo._id%>">Delete</a>
-
+        <div> <%= todo.text %>
+        <a class="fas fa-pen" href="/update/<%=todo._id%>"></a>
+        <a class="fas fa-times-circle" href="/delete/<%=todo._id%>"></a>
+        </div>
     <% }) %>
 
    <%- include("partial/footer.ejs") %>
