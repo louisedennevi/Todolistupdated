@@ -9,7 +9,7 @@ body {
   margin: 10px;
   font-size: 17px;
   color: pink;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: lighter; }
 
 a:link {
@@ -27,13 +27,26 @@ button {
   color: white;
   padding: 2px;
   border: none;
-  height: 20px; }
+  height: 50px; }
 
 .form {
   display: flex;
   align-items: center;
   justify-content: center; }
 
+#form {
+  margin: 8% auto;
+  width: 90%;
+  text-align: center; }
+
 #input {
   height: 20px;
-  border: none; }
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 250px;
+  opacity: 50%;
+  color: #222;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 20px; }
