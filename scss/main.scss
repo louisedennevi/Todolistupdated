@@ -1,126 +1,153 @@
 $a-tags: 'a, a:active, a:hover, a:visited';
 
 * {
-    margin: -2px;
-    padding: 0px;
-    box-sizing: border-box !important;
+margin: -2px;
+padding: 0px;
+box-sizing: border-box !important;
 }
 
 body {
-    background: #fff0f0;
-    text-align: center;
-    margin: 10px;
-    font-size: 17px;
-    color: #222;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
+background: #fff0f0;
+text-align: center;
+margin: 10px;
+font-size: 17px;
+color: #222;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+font-weight: lighter;
 }
 
 h1 {
-    margin-top: 80px;
-    text-transform: uppercase;
-    color: pink;
-    font-size: 50px;
+margin-top: 80px;
+text-transform: uppercase;
+color: pink;
+font-size: 50px;
 }
 
 .buttonfx {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background: pink;
-    color: white;
-    margin: 8% auto;
-    margin-bottom: 40px;
-    overflow: hidden;
-    font-size: 15px;
-    text-transform: uppercase;
-    cursor: pointer;
-        &.update {
-            width: 80px;
-        }
+width: 50px;
+height: 50px;
+border-radius: 5px;
+border: none;
+outline: none;
+background: pink;
+color: white;
+margin-left: 2px;
+overflow: hidden;
+font-size: 15px;
+text-transform: uppercase;
+cursor: pointer;
+&.update {
+    width: 80px;
+}
 }
 
 input {
-    width: 400px;
-    height: 50px;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    color: #222;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    margin: 8% auto;
-    padding: 10px;
-    opacity: 70%;
-    margin-bottom: 40px;
+width: 400px;
+height: 50px;
+font-size: 15px;
+border: none;
+outline: none;
+color: #222;
+letter-spacing: 1px;
+border-radius: 5px;
+margin-right: 2px;
+padding: 10px;
+opacity: 70%;
+}
+
+#createToDo {
+margin-top: 40px;
 }
 
 #{$a-tags} {
-    text-decoration: none;
-    color: #222;
-  }
+text-decoration: none;
+color: #222;
+}
 
-  .text {
-    text-align: left;
-    width: 350px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background: #fffcfc;
-    border-radius: 5px;
-    color: black;
-    font-size: 15px;
-    position: relative;
-  }
+.text {
+text-align: left;
+width: 350px;
+margin: 0 auto;
+padding: 15px 20px;
+letter-spacing: 1px;
+margin-bottom: 15px;
+margin-top: 15px;
+display: flex;
+justify-content: left;
+align-items: center;
+background: #fffcfc;
+border-radius: 5px;
+color: black;
+font-size: 15px;
+position: relative;
+}
 
-  .text a {
-    margin-left: 2px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin-left: 20px;
-    position: absolute;
-  }
+.text a {
+margin-left: 2px;
+font-size: 20px;
+letter-spacing: 1px;
+margin-left: 20px;
+position: absolute;
+}
 
 
-  #update {
+#update {
+top: 18px;
+right: 40px;
+font-size: 15px;
+}
+
+#updateText {
+    margin: 20% auto;
+}
+
+#delete {
     position: absolute;
     top: 18px;
-    right: 40px;
+    right: 16px;
     font-size: 15px;
-  }
-
-  #delete {
-      position: absolute;
-      top: 18px;
-      right: 16px;
-      font-size: 15px;
-  }
+}
 
 
-  a {
-      color: black;
-        &.active{
-            color: red;
-        }
-  }
+a {
+    color: black;
+    &.active{
+        color: white;
+    }
+}
 
-  #sort {
-    width: 100px;
-    height: 20px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background: pink;
-    overflow: hidden;
-    font-size: 10px;
-    opacity: 70%;
-    text-transform: uppercase;
-    margin-left: 72px;
-    margin-right: 72px;
-  }
+.sortDiv {
+    margin-top: 20px;
+}
+
+#sort {
+width: 100px;
+height: 20px;
+border-radius: 5px;
+border: none;
+outline: none;
+background: pink;
+overflow: hidden;
+font-size: 10px;
+opacity: 70%;
+text-transform: uppercase;
+margin-left: 72px;
+margin-right: 72px;
+}
+
+.time {
+font-size: 20px;
+opacity: 60%;
+margin-top: 30px;
+}
+
+.date {
+font-size: 20px;
+opacity: 60%;
+}
+
+.active {
+    font-weight: bold;
+    background-color:black;
+    margin: 5px;
+}

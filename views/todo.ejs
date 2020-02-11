@@ -11,20 +11,20 @@
         <!-- Time & date -->
 
         <div>
-            <div>
-                <%= new Date().getHours() % 12; %>
-                <%= new Date().getMinutes(); %>
-            </div>
-            <div>
-                <%= new Date().getDate(); %>
-                <%= new Date().getDay(); %>
-            </div>
+                <div class="time">
+                        <%= new Date().getHours() % 24; %>
+                        <%= new Date().getMinutes(); %>
+                    </div>
+                    <div class="date">
+                        <%= new Date().getDate(); %>
+                        <%= new Date().getDay(); %>
+                    </div>
         </div>
 
 
         <!-- Todo input -->
         <div>
-            <form action="/todo" method="post">
+            <form action="/todo" method="post" id="createToDo">
                 <input type="text" name="text" placeholder="Write your todo here!">
                 <button type="submit" class="buttonfx bouncein">Add</button>
             </form>
