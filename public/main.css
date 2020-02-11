@@ -89,7 +89,8 @@ a, a:active, a:hover, a:visited {
   margin: 9% auto; }
 
 p {
-  margin-top: 10px; }
+  margin-top: 10px;
+  letter-spacing: 1px; }
 
 #delete {
   position: absolute;
