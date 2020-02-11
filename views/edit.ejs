@@ -1,5 +1,12 @@
 <%- include("partial/header.ejs") %>
 
+<div>
+        <h1>
+           Wanna update?
+        </h1>
+        <p>Go ahead.</p>
+    </div>
+
 <form action="/update/:id" method="Post" id="updateText">
 
     <input type="text" name="text" id="" value="<%= response.text%>" required>
