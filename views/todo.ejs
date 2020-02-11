@@ -1,22 +1,37 @@
+        <!-- header -->
 <%- include("partial/header.ejs") %>
 
 <body>
+    <h1>
+        Get it done!
+    </h1>
 
+        <!-- Todo input -->
         <div>
                 <form action="/todo" method="post">
                     <input type="text" name="text" placeholder="Write your todo here!">
-                    <button type="submit">Add</button>
+                    <button type="submit" class="buttonfx bouncein">Add</button>
                 </form>
            </div>
 
+        <!-- Todolist -->
+
     <% todos.forEach( (todo)=> {%>
-        <div class="text"> <%= todo.text %>
-        <a class="fas fa-pen" href="/update/<%=todo._id%>"></a>
-        <a class="fas fa-times-circle" href="/delete/<%=todo._id%>"></a>
-        </div>
+        <div class="maindiv">
+            <div class="text"> <%= todo.text %>
+                <a class="fas fa-pen" id="update" href="/update/<%=todo._id%>"></a>
+                <a class="fas fa-times-circle" id="delete" href="/delete/<%=todo._id%>"></a>
+            </div>
+     </div>
     <% }) %>
+
+        <!-- Pagination -->
+
+
+
+        <!-- Footer -->
 
    <%- include("partial/footer.ejs") %>
 
 </body>
-</html>
+</html> 
