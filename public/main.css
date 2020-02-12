@@ -126,10 +126,6 @@ a {
   opacity: 60%;
   margin-top: 5px; }
 
-.date {
-  font-size: 20px;
-  opacity: 60%; }
-
 .active {
   background-color: black;
   margin: 5px;
@@ -142,4 +138,5 @@ h2 {
   text-transform: uppercase;
   color: #222;
   margin-bottom: 5px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  opacity: 60%; }
