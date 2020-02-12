@@ -11,13 +11,13 @@
         <!-- Time & date -->
 
         <div>
-                <div class="time">
+                <h2>
+                    Time
+                </h2>
+                    <div class="time">
                         <%= new Date().getHours() % 24; %>
+                        <span>:</span>
                         <%= new Date().getMinutes(); %>
-                    </div>
-                    <div class="date">
-                        <%= new Date().getDate(); %>
-                        <%= new Date().getDay(); %>
                     </div>
         </div>
 
@@ -54,7 +54,7 @@
         <br>
         <br>
        
-        <% for (let page = 1; page < pageCount; page++) { %>
+        <% for (let page = 1; page <= pageCount; page++) { %>
             <% if (currentPage == page) { %>
                 <a href="/todo/?page=<%= page %>" class="active"><%= page %></a>
             <% } else { %>

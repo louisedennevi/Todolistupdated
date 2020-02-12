@@ -41,7 +41,7 @@ router.route("/todo")
     res.redirect("/todo");
   })
   
-        router.route("/update/:id")
+      router.route("/update/:id")
       .get(async(req,res)=>{
     
     

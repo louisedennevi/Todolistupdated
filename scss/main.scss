@@ -145,7 +145,7 @@ margin-right: 120px;
 .time {
 font-size: 20px;
 opacity: 60%;
-margin-top: 30px;
+margin-top: 5px;
 }
 
 .date {
@@ -158,4 +158,13 @@ opacity: 60%;
     margin: 5px;
     padding: 5px 5px;
     border-radius: 5px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 5px;
+    margin-top: 30px;
 }
