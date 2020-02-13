@@ -53,6 +53,7 @@
 
         <br>
         <br>
+        <span><i class="fas fa-angle-left" id="left"></i></span>
        
         <% for (let page = 1; page <= pageCount; page++) { %>
             <% if (currentPage == page) { %>
@@ -61,6 +62,7 @@
                 <a href="/todo/?page=<%= page %>"><%= page %></a>
             <% } %>
         <% } %>
+        <span><i class="fas fa-angle-right" id="right"></i></span>
     
 
         <!-- Footer -->

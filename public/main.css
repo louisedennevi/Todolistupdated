@@ -140,3 +140,9 @@ h2 {
   margin-bottom: 5px;
   margin-top: 30px;
   opacity: 60%; }
+
+#left {
+  margin-right: 10px; }
+
+#right {
+  margin-left: 10px; }
