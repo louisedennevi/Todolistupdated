@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js & node-sass scss -o public --watch"
+    "unittest": "mocha",
+    "start": "nodemon index.js & node-sass scss -o public --watch",
+    "cypress": "cypress open",
+    "cy:run": "cypress run -- --record --spec 'cypress/integration/todo_ui_spec.js'",
+    "test": " npm-run-all --parallel unittest cy:run"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,10 @@
     "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "chai": "^4.2.0",
+    "cypress": "^4.0.1",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
   }
 }

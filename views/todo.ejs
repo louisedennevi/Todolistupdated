@@ -25,8 +25,8 @@
         <!-- Todo input -->
         <div>
             <form action="/todo" method="post" id="createToDo">
-                <input type="text" name="text" placeholder="Write your todo here!">
-                <button type="submit" class="buttonfx bouncein">Add</button>
+                <input type="text" name="text" id="input" placeholder="Write your todo here!">
+                <button type="submit" class="buttonfx bouncein" id="addTodo">Add</button>
             </form>
         </div>
 
@@ -36,7 +36,7 @@
                 <div class="maindiv">
                     <div class="text"> <%= todo.text %>
                         <a class="fas fa-pen" id="update" href="/update/<%=todo._id%>"></a>
-                        <a class="fas fa-times-circle" id="delete" href="/delete/<%=todo._id%>"></a>
+                        <a class="fas fa-times-circle delete" href="/delete/<%=todo._id%>"></a>
                     </div>
                 </div>
         <% }) %>
@@ -63,11 +63,7 @@
             <% } %>
         <% } %>
         <span><i class="fas fa-angle-right" id="right"></i></span>
-    
 
-        <!-- Footer -->
-
-   <%- include("partial/footer.ejs") %>
 
 </body>
 </html> 

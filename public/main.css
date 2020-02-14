@@ -93,7 +93,7 @@ p {
   margin-top: 10px;
   letter-spacing: 1px; }
 
-#delete {
+.delete {
   position: absolute;
   top: 18px;
   right: 16px;
