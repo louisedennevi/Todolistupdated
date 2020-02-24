@@ -1,0 +1,52 @@
+1. byt branch, till develop. Skapa branchen först, byt till branchen, och börja med dina konfigurationer av babel
+(Git branch develop, git checkout branch)
+
+// installera babel och rimraf
+npm install --save-dev babel-cli babel-preset-es2015 rimraf
+
+// I package.json build scripts, lägg till följande scripts, 
+
+"build": rimraf dist/ && babel ./ --out-dir/ --ignore ./node_modules,./babelrc,./package.json,./npm-debug.log --copy-files",
+"start": "npm run build && node dist/index.js"
+
+
+
+Vanliga Git-branch-kategorier
+
+Master
+Develop
+Feature
+Bugfix
+Release
+Hotfix
+
+
+
+Develop
+    - Fork från Master, avnänds som bas för vidareutveckling
+    - mergas in i develop
+
+Feature 
+    - Fork från develop, används för nya features
+    - mergas in i develop
+Feature/(projektets namn)
+ 
+Bugfix
+    - Fork rån develop, anävnds för att rätta fel
+    - Mergas in i develop
+
+Release 
+    - Fork från master, används för att utgivna versioner
+    - mergas aldrig/sällan in i annan branch
+
+Hotfix
+    - 
+    -
+
+--save or --save-dev?
+
+when installing a package that will be bundled into your production bundle, you should use npm install --save
+
+Babel
+transpilerar js till commonJs, kod som "allt" förstår.
+Fancy class-definitioner och andra nymodigheter blir till gammal hederlig tråkig js-kod

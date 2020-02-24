@@ -1,0 +1,70 @@
+        <!-- header -->
+        <%- include("partial/header.ejs") %>
+
+        <body>
+            <div>
+                <h1>
+                    Get it done!
+                </h1>
+            </div>
+
+            <!-- Time & date -->
+
+            <div>
+                <h2>
+                    Time
+                </h2>
+                <div class="time">
+                    <%= new Date().getHours() % 24; %>
+                    <span>:</span>
+                    <%= new Date().getMinutes(); %>
+                </div>
+            </div>
+
+
+            <!-- Todo input -->
+            <div>
+                <form action="/todo" method="post" id="createToDo">
+                    <input type="text" name="text" id="input" placeholder="Write your todo here!">
+                    <button type="submit" class="buttonfx bouncein" id="addTodo">Add</button>
+                </form>
+            </div>
+
+            <!-- Todolist -->
+
+            <% threeTodos.forEach( (todo)=> { %>
+            <div class="maindiv">
+                <div class="text"> <%= todo.text %>
+                    <a class="fas fa-pen" id="update" href="/update/<%=todo._id%>"></a>
+                    <a class="fas fa-times-circle delete" href="/delete/<%=todo._id%>"></a>
+                </div>
+            </div>
+            <% }) %>
+
+
+            <!-- Sort -->
+
+            <div class="sortDiv">
+                <button id="sort"><a href="/todo/?sort=1">Sort by A - Z</a></button>
+                <button id="sort"><a href="/todo/?sort=-1">Sort by Z - A</a></button>
+            </div>
+
+            <!-- Pagination -->
+
+            <br>
+            <br>
+            <span><i class="fas fa-angle-left" id="left"></i></span>
+
+            <% for (let page = 1; page <= pageCount; page++) { %>
+            <% if (currentPage == page) { %>
+            <a href="/todo/?page=<%= page %>" class="active"><%= page %></a>
+            <% } else { %>
+            <a href="/todo/?page=<%= page %>"><%= page %></a>
+            <% } %>
+            <% } %>
+            <span><i class="fas fa-angle-right" id="right"></i></span>
+
+
+        </body>
+
+        </html>
